@@ -8,6 +8,22 @@ syntax on
 set encoding=utf-8
 set guifont=Courier_New:h8:cANSI
 
+set nocompatible
+set backspace=2
+
+source $VIMRUNTIME/vimrc_example.vim
+if has('win32')
+    source $VIMRUNTIME/mswin.vim
+    behave mswin
+endif
+
+" 解决菜单乱码
+set langmenu=zh_CN
+let $LANG = 'zh_CN.UTF-8'
+source $VIMRUNTIME/delmenu.vim
+source $VIMRUNTIME/menu.vi
+
+
 " Whitespace stuff
 set nowrap
 set tabstop=2
